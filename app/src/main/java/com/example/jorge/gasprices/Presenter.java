@@ -79,8 +79,10 @@ public class Presenter {
 
 
     public void checkTown(String s) {
+        if (townsArray == null){
+            return;
+        }
         boolean enableButton = model.compareTownsBool (s, townsArray);
-        //boolean enableButton = false;
         if (enableButton){
             int index = model.compareTownsInt(s, townsArray);
             selectedTown = townsArray[index];

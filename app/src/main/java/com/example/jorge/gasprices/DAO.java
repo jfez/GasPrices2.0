@@ -26,10 +26,4 @@ public interface DAO {
     @Query("SELECT * FROM town WHERE province_id == :provID ORDER BY name")
     Town[] GetTowns(int provID);
 
-    /*@Query("SELECT id FROM town WHERE name == :targetName")
-    int GetTownID (int targetName);
-
-    @Query("SELECT code FROM GasType WHERE label == :targetLabel")
-    int GetFuelID (int targetLabel);*/
-
 }
